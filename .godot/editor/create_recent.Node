@@ -1,0 +1,14 @@
+ColorRect
+AudioStreamPlayer2D
+WorldEnvironment
+Node2D
+PointLight2D
+Camera2D
+HBoxContainer
+CanvasLayer
+CollisionShape2D
+AnimatedSprite2D
+AnimationPlayer
+Sprite2D
+CharacterBody2D
+TileMap

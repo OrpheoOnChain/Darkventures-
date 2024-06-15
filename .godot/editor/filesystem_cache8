@@ -1,0 +1,41 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1718464770
+icon.svg::CompressedTexture2D::6116682425825124854::1718371660::1718371663::1::::<><>::
+::res://addons/::1718464628
+::res://addons/godot-git-plugin/::1718464628
+git_plugin.gdextension::GDExtension::-1::1718464625::0::1::::<><>::
+plugin.cfg::TextFile::-1::1718464625::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1718464625::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1718464628
+::res://addons/godot-git-plugin/macos/::1718464628
+::res://addons/godot-git-plugin/win64/::1718464628
+::res://Assets/::1718385763
+LICENSE & CREDITS.txt::TextFile::-1::1713561694::0::1::::<><>::
+light circle.png::CompressedTexture2D::214490546558959742::1718377673::1718377737::1::::<><>::
+::res://Assets/fonts/::1718372025
+PixelOperator8-Bold.ttf::FontFile::7403412746807503229::1709845150::1718372025::1::::<><>::
+PixelOperator8.ttf::FontFile::4281453457203776300::1709845150::1718372025::1::::<><>::
+::res://Assets/music/::1718382969
+Sound Track .mp3::AudioStreamMP3::3419735476276852682::1718382661::1718382969::1::::<><>::
+time_for_adventure.mp3::AudioStreamMP3::5328207983181796407::1710421712::1718372025::1::::<><>::
+::res://Assets/sounds/::1718372026
+coin.wav::AudioStreamWAV::5009922623791540475::1710357490::1718372026::1::::<><>::
+explosion.wav::AudioStreamWAV::6678265759209149607::1710357462::1718372026::1::::<><>::
+hurt.wav::AudioStreamWAV::3664282409709218631::1710357250::1718372026::1::::<><>::
+jump.wav::AudioStreamWAV::286137966301805327::1710357386::1718372026::1::::<><>::
+power_up.wav::AudioStreamWAV::7450312200717621098::1710357580::1718372026::1::::<><>::
+tap.wav::AudioStreamWAV::8435342242085025589::1710357264::1718372026::1::::<><>::
+::res://Assets/sprites/::1718385772
+coin.png::CompressedTexture2D::6512293840882433858::1709915510::1718372025::1::::<><>::
+fruit.png::CompressedTexture2D::798843285701560475::1709920922::1718372025::1::::<><>::
+kitty.png::CompressedTexture2D::7137537648271173992::1718385620::1718385772::1::::<><>::
+knight.png::CompressedTexture2D::1724823646534000393::1709919020::1718372025::1::::<><>::
+platforms.png::CompressedTexture2D::2406736403192584564::1709921018::1718372025::1::::<><>::
+slime_green.png::CompressedTexture2D::43731914901758661::1709916616::1718372025::1::::<><>::
+slime_purple.png::CompressedTexture2D::9067959274388071405::1709917040::1718372025::1::::<><>::
+world_tileset.png::CompressedTexture2D::3328853260464007003::1709921536::1718372025::1::::<><>::
+::res://Scenes/::1718463226
+game.tscn::PackedScene::7274428697824247994::1718463226::0::1::::<><>::uid://bnoryyibsotgt::::res://Assets/sprites/world_tileset.png<>uid://dnj78byb5px0n::::res://Scenes/player.tscn<>uid://db5vl6rngghy::::res://Assets/light circle.png<>uid://boyssqqgw76ug::::res://Assets/music/Sound Track .mp3
+player.tscn::PackedScene::8092298382812449203::1718463226::0::1::::<><>::res://Scripts/player.gd<>uid://c8xqg42u7mqw3::::res://Assets/sprites/kitty.png
+::res://Scripts/::1718385205
+player.gd::GDScript::-1::1718385205::0::1::::<>CharacterBody2D<>::
