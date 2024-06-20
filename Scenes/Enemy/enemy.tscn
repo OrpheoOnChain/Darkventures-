@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0eh4p2x4048m"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_4jldm"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_4jldm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -10.0
+offset_top = -12.0
+offset_right = 85.0
+offset_bottom = 15.0
+scale = Vector2(0.215525, 0.215525)
+metadata/_edit_group_ = true
