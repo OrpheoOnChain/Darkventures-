@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbv11pgpnft2a"]
+[gd_scene load_steps=9 format=3 uid="uid://dbv11pgpnft2a"]
 
 [ext_resource type="Texture2D" uid="uid://bnoryyibsotgt" path="res://Assets/sprites/world_tileset.png" id="1_gx4jv"]
 [ext_resource type="PackedScene" uid="uid://dnj78byb5px0n" path="res://Scenes/player.tscn" id="2_1w8km"]
 [ext_resource type="Texture2D" uid="uid://db5vl6rngghy" path="res://Assets/light circle.png" id="3_u2h51"]
 [ext_resource type="AudioStream" uid="uid://boyssqqgw76ug" path="res://Assets/music/Sound Track .mp3" id="4_5rbsp"]
+[ext_resource type="PackedScene" uid="uid://cldeogfa65c4f" path="res://Scenes/Enemy/slime.tscn" id="5_o0o44"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mfyj"]
 texture = ExtResource("1_gx4jv")
@@ -430,3 +431,6 @@ environment = SubResource("Environment_uws4l")
 stream = ExtResource("4_5rbsp")
 volume_db = -30.639
 autoplay = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_o0o44")]
+position = Vector2(545, 510)
