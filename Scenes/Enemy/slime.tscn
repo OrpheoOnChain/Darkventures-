@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cldeogfa65c4f"]
+[gd_scene load_steps=13 format=3 uid="uid://cldeogfa65c4f"]
 
 [ext_resource type="PackedScene" uid="uid://c0eh4p2x4048m" path="res://Scenes/Enemy/enemy.tscn" id="1_yp2lv"]
 [ext_resource type="Script" path="res://Scenes/Enemy/slime.gd" id="2_8fjca"]
@@ -49,6 +49,9 @@ bg_color = Color(0.849471, 0.844781, 0.860635, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bn0y"]
 bg_color = Color(0.958831, 0.381192, 0.401861, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spcfk"]
+size = Vector2(2, 10)
+
 [node name="CharacterBody2D" instance=ExtResource("1_yp2lv")]
 script = ExtResource("2_8fjca")
 
@@ -70,5 +73,13 @@ scale = Vector2(0.135526, 0.055525)
 theme_override_styles/background = SubResource("StyleBoxFlat_7micj")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7bn0y")
 step = 1.0
-value = 75.0
+value = 100.0
 show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(9, 6)
+shape = SubResource("RectangleShape2D_spcfk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

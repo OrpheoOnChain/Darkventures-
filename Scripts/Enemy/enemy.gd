@@ -1,7 +1,19 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+
+enum State {
+	WALK,
+	ATTACK,
+}
+
+enum Direction {
+	LEFT = -1,
+	RIGHT = 1,
+}
+
+var current_state = State.WALK
+var current_direction = Direction.RIGHT
 
 var health: float
 
