@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnoryyibsotgt" path="res://Assets/sprites/world_tileset.png" id="1_gx4jv"]
 [ext_resource type="PackedScene" uid="uid://dnj78byb5px0n" path="res://Scenes/player.tscn" id="2_1w8km"]
-[ext_resource type="Texture2D" uid="uid://db5vl6rngghy" path="res://Assets/light circle.png" id="3_u2h51"]
+[ext_resource type="Texture2D" uid="uid://cwjki704kevid" path="res://New Features Test/light.webp" id="3_e0aj6"]
 [ext_resource type="AudioStream" uid="uid://boyssqqgw76ug" path="res://Assets/music/Sound Track .mp3" id="4_5rbsp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mfyj"]
@@ -372,12 +372,8 @@ texture = ExtResource("1_gx4jv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1mfyj")
 
-[sub_resource type="Environment" id="Environment_uws4l"]
-background_mode = 3
-ambient_light_energy = 0.0
-tonemap_mode = 3
-tonemap_exposure = 0.45
-tonemap_white = 16.0
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tksti"]
+light_mode = 2
 
 [node name="Game" type="Node2D"]
 
@@ -393,40 +389,18 @@ position = Vector2(580, 538)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 texture_filter = 1
 ignore_rotation = false
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 
-[node name="Light" type="Node2D" parent="Player/Camera2D"]
-position = Vector2(-580, -538)
-
-[node name="TextureLight" type="PointLight2D" parent="Player/Camera2D/Light"]
-position = Vector2(580, 538)
-scale = Vector2(0.552109, 0.400744)
-energy = 16.0
-blend_mode = 2
-range_z_min = 1000
-range_z_max = 1000
-texture = ExtResource("3_u2h51")
-texture_scale = 0.3
-
-[node name="Shadow" type="PointLight2D" parent="Player/Camera2D/Light"]
-position = Vector2(580, 538)
-scale = Vector2(0.552109, 0.400744)
-shadow_enabled = true
-shadow_filter = 1
-shadow_filter_smooth = 21.0
-texture = ExtResource("3_u2h51")
-texture_scale = 0.5
-
-[node name="Background" type="ColorRect" parent="."]
-offset_top = 6.0
-offset_right = 1139.0
-offset_bottom = 663.0
-color = Color(0, 0, 0, 0.670588)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_uws4l")
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+color = Color(0.877608, 0.726114, 0.45412, 1)
+texture = ExtResource("3_e0aj6")
+texture_scale = 0.2
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_5rbsp")
-volume_db = -30.639
+volume_db = 12.0
 autoplay = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+material = SubResource("CanvasItemMaterial_tksti")
+color = Color(0, 0, 0, 1)
