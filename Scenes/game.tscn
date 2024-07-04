@@ -402,5 +402,6 @@ volume_db = 12.0
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 material = SubResource("CanvasItemMaterial_tksti")
 color = Color(0, 0, 0, 1)

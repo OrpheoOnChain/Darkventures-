@@ -1,0 +1,152 @@
+[gd_scene load_steps=21 format=3 uid="uid://crhy7d18hs55l"]
+
+[ext_resource type="Script" path="res://New Features Test/testcharacter.gd" id="1_3eugt"]
+[ext_resource type="Texture2D" uid="uid://bf6sxvqecewkn" path="res://Assets/sprites/MainCharacter-Sheet.png" id="2_2wk2n"]
+[ext_resource type="Texture2D" uid="uid://cwjki704kevid" path="res://New Features Test/light.webp" id="3_8wy7v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e520l"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le2dn"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5lu"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7fns"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wseax"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3xqc"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d4r5"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d4j7"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so7ff"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eklkt"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peohb"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81wy2"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwhfv"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnlno"]
+atlas = ExtResource("2_2wk2n")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16otm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e520l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le2dn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp5lu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7fns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wseax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3xqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d4r5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d4j7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_so7ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eklkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peohb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81wy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwhfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnlno")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jw3e7"]
+size = Vector2(9, 17)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xetvt"]
+light_mode = 2
+
+[node name="TestCharacter" type="CharacterBody2D"]
+visibility_layer = 16
+position = Vector2(-136, 373)
+script = ExtResource("1_3eugt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1112, 654)
+sprite_frames = SubResource("SpriteFrames_16otm")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1112, 656)
+zoom = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1112, 656)
+shape = SubResource("RectangleShape2D_jw3e7")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1112, 656)
+scale = Vector2(-7.91187, 8.20911)
+color = Color(0.877608, 0.726114, 0.45412, 1)
+texture = ExtResource("3_8wy7v")
+texture_scale = 0.1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+material = SubResource("CanvasItemMaterial_xetvt")
+color = Color(0, 0, 0, 1)
